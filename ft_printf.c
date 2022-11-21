@@ -6,7 +6,7 @@
 /*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 02:21:55 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/04 20:26:47 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2022/11/21 20:47:24 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,21 @@ int	ft_printf(const char *format, ...)
 	int		i;
 
 	len = 0;
-	i = -1;
+	i = 0;
 	va_start(args, format);
-	while (format[++i])
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			if (ft_is_format(format[++i]))
-			{
-				len += ft_check(args, format[i]);
-			}
+			if (ft_is_format(format[i + 1]))
+				len += ft_check(args, format[i + 1]);
+			else
+				len += ft_putchar_fd(format[i + 1], 1);
+			i++;
 		}
 		else
 			len += ft_putchar_fd(format[i], 1);
+		i++;
 	}
 	va_end(args);
 	return (len);
