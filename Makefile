@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+         #
+#    By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 18:24:47 by zel-bouz          #+#    #+#              #
-#    Updated: 2022/11/21 20:40:48 by zel-bouz         ###   ########.fr        #
+#    Updated: 2023/03/11 02:32:32 by zel-bouz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,13 @@ RM = rm -f
 
 AR = ar rcs
 
-FILES = ft_printf.c ft_putchar_fd.c ft_puthexa.c ft_putnbr_fd.c ft_putunbr.c ft_putptr.c ft_putstr_fd.c ft_putunbr.c 
+FILES = print/ft_printf.c \
+	print/ft_putchar_fd.c \
+	print/ft_puthexa.c \
+	print/ft_putnbr_fd.c \
+	print/ft_putptr.c \
+	print/ft_putstr_fd.c \
+	print/ft_putunbr.c
 
 OBJ = $(FILES:.c=.o)
 

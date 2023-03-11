@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 01:41:51 by zel-bouz          #+#    #+#             */
-/*   Updated: 2022/11/21 20:48:38 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:33:05 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_putstr_fd(char *s, int fd)
 {
